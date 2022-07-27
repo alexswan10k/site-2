@@ -5,11 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-static": "next build && next export",
+    "build-static": "next build && next export -o ./docs",
     "start": "next start",
     "lint": "next lint",
     "export": "next export",
-    "run-static": "http-server ./out -p 8888"
+    "run-static": "http-server ./docs -p 8888"
   },
   "dependencies": {
     "next": "12.2.3",
