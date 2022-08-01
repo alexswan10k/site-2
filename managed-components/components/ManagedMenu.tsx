@@ -7,7 +7,7 @@ import Menu from "./Menu";
 const menu = forComponent(Menu, "Menu").withDeepSchema({
     items: dsArray({
         displayName: 'string',
-        link: ['./', './about-us', './test']
+        link: ['./', './about-us', './test', './contact']
     })
 }).withSensibleDefault();
 

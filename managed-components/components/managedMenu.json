@@ -1,1 +1,1 @@
-{"component":"Menu","parameters":{"items":[{"displayName":"LambdaSafe","link":"./"},{"displayName":"About Us","link":"./about-us"}]},"children":[]}
+{"component":"Menu","parameters":{"items":[{"displayName":"LambdaSafe","link":"./"},{"displayName":"About Us","link":"./about-us"},{"displayName":"Get in touch","link":"./contact"}]},"children":[]}
