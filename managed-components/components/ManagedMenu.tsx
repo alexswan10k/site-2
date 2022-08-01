@@ -4,11 +4,10 @@ import { createSchema, dsArray, forComponent } from "react-inline-node-editor";
 import { ManagedEditor } from "react-inline-node-editor-bigkit";
 import Menu from "./Menu";
 
-
 const menu = forComponent(Menu, "Menu").withDeepSchema({
     items: dsArray({
         displayName: 'string',
-        link: ['./index', './test']
+        link: ['./', './about-us', './test']
     })
 }).withSensibleDefault();
 
