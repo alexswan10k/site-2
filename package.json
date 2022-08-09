@@ -15,8 +15,8 @@
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-inline-node-editor": "^0.0.4",
-    "react-inline-node-editor-bigkit": "^0.0.4",
+    "react-inline-node-editor": "^0.0.5",
+    "react-inline-node-editor-bigkit": "^0.0.5",
     "framer-motion" : "6.5.1"
   },
   "devDependencies": {
