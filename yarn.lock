@@ -1789,21 +1789,21 @@ react-dom@18.2.0:
     loose-envify "^1.1.0"
     scheduler "^0.23.0"
 
-react-inline-node-editor-bigkit@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/react-inline-node-editor-bigkit/-/react-inline-node-editor-bigkit-0.0.5.tgz#6ab226bc47d621569f6dcb36c53f900c8fc42463"
-  integrity sha512-nzKmRXxbUxfar5EcSQRjkTGuqivkqFHLR/h+f50vC2hf1c8PUi+bszKXtsfQSJhBnI2+S9kI5On5GURleW14cw==
+react-inline-node-editor-bigkit@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-inline-node-editor-bigkit/-/react-inline-node-editor-bigkit-0.0.7.tgz#3790bf628622ce72fcc0004dae2b3402192431fb"
+  integrity sha512-iIs8f3CAiRCRLmK1GpXnq4YAwWsIzL6bOPA1JBgD/B29xX7B2Xz5q87v5j4HJcOF8JRsJLwXakPJ16hjmTAedA==
   dependencies:
     "@emotion/css" "^11.1.3"
     myzod "1.8.7"
-    react-inline-node-editor "^0.0.5"
+    react-inline-node-editor "^0.0.7"
     ts-loader "^9.2.7"
     typescript "^4.6.2"
 
-react-inline-node-editor@^0.0.5:
-  version "0.0.5"
-  resolved "https://registry.yarnpkg.com/react-inline-node-editor/-/react-inline-node-editor-0.0.5.tgz#df6c3e61239d0f6a54e0cd4b55b4218dd1b12b27"
-  integrity sha512-AfmMWlyH1rXD630Prd1GKzX2zQDeRh05c7YvI3ak9hzh4EgtMvhcTG2Qgc/6fKdSYXknh/5Rg+49nlp6zisO3A==
+react-inline-node-editor@^0.0.7:
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/react-inline-node-editor/-/react-inline-node-editor-0.0.7.tgz#b372fef65d07e4975832f9ca1202ec4cdcc4d964"
+  integrity sha512-4OEpjjb6bQPAWIQgSNIW/B1G3q8INnN4nQr4mNAYtRbbirvhCGOBg6gV4/NYjXWu7wScU4kFoyFGh4mZ0PSEGA==
   dependencies:
     "@emotion/css" "^11.1.3"
     myzod "1.8.7"
