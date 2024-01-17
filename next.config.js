@@ -7,6 +7,7 @@ const nextConfig = {
       "/": { page: "/" },
       "/about-us": { page: "/about-us"},
       "/test": { page: "/test" },
+      "/organizator/privacy-policy": { page: "/organizator/privacy-policy" },
     } 
   },
   experimental: {
