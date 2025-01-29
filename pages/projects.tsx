@@ -3,8 +3,9 @@ import { ManagedEditor } from "react-inline-node-editor-bigkit"
 import ManagedMenu from "../managed-components/components/ManagedMenu";
 import PageContainer from "./components/PageContainer";
 import { schema } from "../managed-components/schema";
+import Image from "next/image";
 
-const AboutUsPage: NextPage = () => {
+const ProjectsPage: NextPage = () => {
   // Styles object to organize all inline styles
   const styles = {
     container: {
@@ -22,6 +23,8 @@ const AboutUsPage: NextPage = () => {
     },
     heroImage: {
       flex: 1,
+      position: "relative",
+      width: "100%",
       height: '400px',
       backgroundColor: '#e0e0e0',
       display: 'flex',
@@ -46,6 +49,8 @@ const AboutUsPage: NextPage = () => {
     },
     missionImage: {
       flex: 1,
+      position: "relative",
+      width: "100%",
       height: '300px',
       backgroundColor: '#e0e0e0',
       display: 'flex',
@@ -99,7 +104,7 @@ const AboutUsPage: NextPage = () => {
       <br />
       <section style={styles.heroSection}>
         <div style={styles.heroImage}>
-          <img src="agentic.jpg" alt="Agentic Systems" style={{ width: "100%", height: "100%", borderRadius: '8px' }} />
+          <Image src="agentic.jpg" alt="Agentic Systems" layout="fill" />
         </div>
         <div style={styles.heroText}>
           <h1 style={styles.sectionTitle}>Agentic Systems</h1>
@@ -120,25 +125,37 @@ const AboutUsPage: NextPage = () => {
           </p>
         </div>
         {/* <div style={styles.missionImage}> */}
-          <img src="vm-reverb-ss.png" alt="Voltage Modular" style={{ height: "100%", borderRadius: '8px' }} />
+          <Image src="vm-reverb-ss.png" alt="Voltage Modular" width={300} height={400}  />
         {/* </div> */}
       </section>
 
       <section style={styles.heroSection}>
         <div style={styles.heroImage}>
-          <img src="line-drag-demo.gif" alt="Safe Passage" style={{ width: "100%", height: "100%", borderRadius: '8px' }} />
+          <Image src="line-drag-demo.gif" alt="Safe Passage" layout="fill" />
         </div>
         <div style={styles.heroText}>
           <h1 style={styles.sectionTitle}>Safe Passage</h1>
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-          We have created a Vue wrapper for a 3D visualization library used in medical imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.  <strong>Demo available on request.</strong>
+          We have created a fully featured Vue abstraction for a 3D visualization library used in medical and security imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.  <strong>Demo available on request.</strong>
           </p>
         </div>
       </section>
+
+      <section style={styles.missionSection}>
+          <div style={styles.missionText}>
+            <h2 style={styles.sectionTitle}>Bigkit</h2>
+            <p>
+            Bigkit attempts to bridge the gap between a publish-focused CMS and real application development. It was built from the ground up to include some core tenets an opinionated software engineer might expect from a system builder.
+            </p>
+          </div>
+          <div style={styles.missionImage}>
+            <Image src="bigkit-hello-world.gif" alt="Mission" layout="fill" style={{ borderRadius: '8px' }} />
+          </div>
+        </section>
       
 
     </div>
   );
 }
 
-export default AboutUsPage;
+export default ProjectsPage;

@@ -3,6 +3,7 @@ import { ManagedEditor } from "react-inline-node-editor-bigkit"
 import ManagedMenu from "../managed-components/components/ManagedMenu";
 import PageContainer from "./components/PageContainer";
 import { schema } from "../managed-components/schema";
+import Image from "next/image";
 
 const AboutUsPage: NextPage = () => {
     // Styles object to organize all inline styles
@@ -22,6 +23,8 @@ const AboutUsPage: NextPage = () => {
       },
       heroImage: {
         flex: 1,
+        position: "relative",
+        width: "100%",
         height: '400px',
         backgroundColor: '#e0e0e0',
         display: 'flex',
@@ -46,6 +49,8 @@ const AboutUsPage: NextPage = () => {
       },
       missionImage: {
         flex: 1,
+        position: "relative",
+        width: "100%",
         height: '300px',
         backgroundColor: '#e0e0e0',
         display: 'flex',
@@ -67,6 +72,7 @@ const AboutUsPage: NextPage = () => {
         textAlign: 'center',
       },
       memberImage: {
+        position: "relative",
         width: '200px',
         height: '200px',
         borderRadius: '50%',
@@ -100,12 +106,18 @@ const AboutUsPage: NextPage = () => {
         <section style={styles.heroSection}>
           <div style={styles.heroImage}>
             {/* [Hero Image Placeholder] */}
-            <img src="dude-at-computer.jpg" alt="Hero Image" style={{width: "100%", height: "100%", borderRadius: '8px'}} />
+            <Image 
+              src="/dude-at-computer.jpg" // Assuming the image is in the public directory
+              alt="Hero Image"
+              layout="fill" // This allows the image to fill its container
+
+              style={{ borderRadius: '8px' }} // Inline styles for border radius
+/>
           </div>
           <div style={styles.heroText}>
             <h1 style={styles.sectionTitle}>About Our Company</h1>
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
-            Lambdasafe, founded by Alex, who brings over a decade of experience in building scalable and reliable systems. Previously at companies like Rolls Royce and Hargreaves Lansdown, Alex developed the core technology for BIGKit, a rapid application platform. Our approach is to use tools that enhance determinism, predictability, and reliability, leading to software with significantly lower defect rates and higher stability.
+            Lambdasafe, founded by Alex Swan, a seasoned full stack software engineer, who brings over a decade of experience in building scalable and reliable systems. Previously having worked at companies such as Rolls Royce and Hargreaves Lansdown, Alex developed the core technology for BIGKit, a rapid application platform. Our approach is to use tools that enhance determinism, predictability, and reliability, leading to software with significantly lower defect rates and higher stability.
             </p>
           </div>
         </section>
@@ -119,21 +131,21 @@ const AboutUsPage: NextPage = () => {
             </p>
           </div>
           <div style={styles.missionImage}>
-            <img src="ornament.jpg" alt="Mission" style={{width: "100%", height: "100%", borderRadius: '8px'}} />
+            <Image src="ornament.jpg" alt="Mission" layout="fill" style={{ borderRadius: '8px' }} />
           </div>
         </section>
 
         <section style={styles.heroSection}>
           <div style={styles.heroImage}>
             {/* [Hero Image Placeholder] */}
-            <img src="glass-building.jpg" alt="Hero Image" style={{width: "100%", height: "100%", borderRadius: '8px'}} />
+            <Image src="glass-building.jpg" alt="Hero Image"  layout="fill" style={{ borderRadius: '8px' }} />
           </div>
           <div style={styles.heroText}>
             <h1 style={styles.sectionTitle}>Our Process</h1>
             <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
             Our development process starts with understanding your specific problem, guiding you towards an effective solution. We offer two main approaches:
 Agile Approach: Recommended for flexibility, allowing for quick iterations and user feedback to shape the development cycle.
-Up-Front Approach: For those with fixed budgets, we provide detailed estimates but note the inherent risks and premiums of this method. Both methods aim for continuous feedback and visible progress, ensuring you're investing in features that add the most value.
+Up-Front Approach: For those with fixed budgets, we provide detailed estimates but note the inherent risks and premiums of this method. Both methods aim for continuous feedback and visible progress, ensuring you&#39;re investing in features that add the most value.
             </p>
           </div>
         </section>
@@ -144,7 +156,7 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
           <div style={styles.teamSection}>
             <div style={styles.teamMember}>
                 <div style={styles.memberImage}>
-                  <img src="alex-profile-c.png" alt="Team Member Photo" style={{width: "80%", height: "100%"}} />
+                  <Image src="alex-profile-c.png" alt="Team Member Photo" layout="fill"  />
                 </div>
                 <h3>Alex Swan</h3>
                 <p>Director</p>

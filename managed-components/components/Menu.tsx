@@ -2,6 +2,7 @@ import Link from "next/link";
 import { FC } from "react";
 import { css } from '@emotion/css'
 import { motion } from "framer-motion";
+import Image from "next/image";
 
 const Menu: FC<{ items: { displayName: string, link: string }[] }> = ({ items }) => {
     return <div className={css`
@@ -9,12 +10,14 @@ const Menu: FC<{ items: { displayName: string, link: string }[] }> = ({ items })
         align-items: center;
     `}>
                     <Link href="./">
-                        <img 
+                        <Image 
                             src="lambda.png" 
                             alt="Lambda Logo" 
-                            style={{
-                                height: "30px"
-                            }}
+                            height={30}
+                            width={30}
+                            // style={{
+                            //     height: "30px"
+                            // }}
                         />
                     </Link>
         {items.map((item, idx) => <div key={item.displayName} className={css`
