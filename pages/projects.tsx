@@ -116,7 +116,7 @@ const ProjectsPage: NextPage = () => {
 
       <section style={styles.missionSection}>
         <div style={styles.missionText}>
-          <h2 style={styles.sectionTitle}>Voltage Modular Modules</h2>
+          <h2 style={styles.sectionTitle}>Voltage Modular</h2>
           <p>
           We have developed advanced modules for a leading modular synthesis platform, utilizing cutting-edge programming languages to enhance audio processing capabilities. Our innovations include solutions for real-time audio effects and performance-enhancing technologies.<strong>Demo on request. </strong>
           </p>
@@ -143,9 +143,17 @@ const ProjectsPage: NextPage = () => {
 
       <section style={styles.missionSection}>
           <div style={styles.missionText}>
-            <h2 style={styles.sectionTitle}>Bigkit</h2>
+            <h2 style={styles.sectionTitle}>BIGKit</h2>
             <p>
-            Bigkit attempts to bridge the gap between a publish-focused CMS and real application development. It was built from the ground up to include some core tenets an opinionated software engineer might expect from a system builder.
+            BIGKit attempts to bridge the gap between a publish-focused CMS and real application development. It was built from the ground up to include some core tenets an opinionated software engineer might expect from a system builder.
+            </p>
+            <p>
+              You can read the full articles below: 
+              <ul>
+              <li><a href="https://blog.devgenius.io/introducing-bigkit-95dc874ee689" target="_blank" rel="noreferrer">Introducing BIGKit</a></li>
+              <li><a href="https://medium.com/dev-genius/introducing-bigkit-part-2-8136678c55a9" target="_blank" rel="noreferrer">Introducing BIGKit part 2</a></li>
+              <li><a href="https://medium.com/swlh/exploring-graphql-with-bigkit-d6c6236b3a5d" target="_blank" rel="noreferrer">Exploring GraphQL integration With BIGKit</a></li>
+              </ul>
             </p>
           </div>
           <div style={styles.missionImage}>
