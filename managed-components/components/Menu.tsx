@@ -6,7 +6,17 @@ import { motion } from "framer-motion";
 const Menu: FC<{ items: { displayName: string, link: string }[] }> = ({ items }) => {
     return <div className={css`
         display: flex;
+        align-items: center;
     `}>
+                    <Link href="./">
+                        <img 
+                            src="lambda.png" 
+                            alt="Lambda Logo" 
+                            style={{
+                                height: "30px"
+                            }}
+                        />
+                    </Link>
         {items.map((item, idx) => <div key={item.displayName} className={css`
                 padding: 1rem
             `}>
@@ -29,6 +39,7 @@ const Menu: FC<{ items: { displayName: string, link: string }[] }> = ({ items })
                     transition: { duration: 1 },
                 }}>
                 <Link href={item.link}>{item.displayName}</Link>
+                
             </motion.div>
 
         </div>

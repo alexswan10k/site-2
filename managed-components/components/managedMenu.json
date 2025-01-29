@@ -1,1 +1,24 @@
-{"component":"Menu","parameters":{"items":[{"displayName":"LambdaSafe","link":"./"},{"displayName":"About Us","link":"./about-us"},{"displayName":"Get in touch","link":"./contact"}]},"children":[]}
+{
+    "component": "Menu",
+    "parameters": {
+        "items": [
+            {
+                "displayName": "LambdaSafe",
+                "link": "./"
+            },
+            {
+                "displayName": "About Us",
+                "link": "./about-us"
+            },
+            {
+                "displayName": "Projects",
+                "link": "./projects"
+            },
+            {
+                "displayName": "Get in touch",
+                "link": "./contact"
+            }
+        ]
+    },
+    "children": []
+}
