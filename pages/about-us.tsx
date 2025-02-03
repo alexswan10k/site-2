@@ -1,4 +1,5 @@
 import { NextPage } from "next"
+import { css } from "@emotion/css";
 import { ManagedEditor } from "react-inline-node-editor-bigkit"
 import ManagedMenu from "../managed-components/components/ManagedMenu";
 import PageContainer from "./components/PageContainer";
@@ -95,7 +96,16 @@ const AboutUsPage: NextPage = () => {
         <ManagedMenu />
         <br />  
 
-        <section style={styles.heroSection}>
+        <div className={css`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 20px;
+
+            // for mobile drop down to 1 column
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        `}>
           <div style={styles.heroImage}>
             {/* [Hero Image Placeholder] */}
             <Image 
@@ -112,10 +122,9 @@ const AboutUsPage: NextPage = () => {
             Lambdasafe, founded by Alex Swan, a seasoned full stack software engineer, who brings over a decade of experience in building scalable and reliable systems. Previously having worked at companies such as Rolls Royce and Hargreaves Lansdown, Alex developed the core technology for BIGKit, a rapid application platform. Our approach is to use tools that enhance determinism, predictability, and reliability, leading to software with significantly lower defect rates and higher stability.
             </p>
           </div>
-        </section>
+
   
-        {/* Mission Section */}
-        <section style={styles.missionSection}>
+
           <div style={styles.missionText}>
             <h2 style={styles.sectionTitle}>Our Mission</h2>
             <p>
@@ -125,9 +134,9 @@ const AboutUsPage: NextPage = () => {
           <div style={styles.missionImage}>
             <Image src="ornament.jpg" alt="Mission" layout="fill" style={{ borderRadius: '8px' }} />
           </div>
-        </section>
 
-        <section style={styles.heroSection}>
+
+
           <div style={styles.heroImage}>
             {/* [Hero Image Placeholder] */}
             <Image src="glass-building.jpg" alt="Hero Image"  layout="fill" style={{ borderRadius: '8px' }} />
@@ -140,10 +149,8 @@ Agile Approach: Recommended for flexibility, allowing for quick iterations and u
 Up-Front Approach: For those with fixed budgets, we provide detailed estimates but note the inherent risks and premiums of this method. Both methods aim for continuous feedback and visible progress, ensuring you&#39;re investing in features that add the most value.
             </p>
           </div>
-        </section>
   
-        {/* Team Section */}
-        <section>
+
           <h2 style={{ ...styles.sectionTitle, textAlign: 'center' }}>Our Team</h2>
           <div style={styles.teamSection}>
             <div style={styles.teamMember}>
@@ -154,9 +161,8 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
                 <p>Director</p>
               </div>
           </div>
-        </section>
+
   
-        {/* Stats Section */}
         <section style={styles.statsSection}>
           <div style={styles.statItem}>
             <h3>15+</h3>
@@ -171,6 +177,7 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
             <p>Client Satisfaction</p>
           </div>
         </section>
+        </div>
       </PageContainer>
     );
   }

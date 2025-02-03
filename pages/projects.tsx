@@ -1,9 +1,8 @@
 import { NextPage } from "next"
-import { ManagedEditor } from "react-inline-node-editor-bigkit"
 import ManagedMenu from "../managed-components/components/ManagedMenu";
 import PageContainer from "./components/PageContainer";
-import { schema } from "../managed-components/schema";
 import Image from "next/image";
+import { css } from "@emotion/css";
 
 const ProjectsPage: NextPage = () => {
   // Styles object to organize all inline styles
@@ -95,7 +94,17 @@ const ProjectsPage: NextPage = () => {
       <ManagedMenu />
 
       <br />
-      <section style={styles.heroSection}>
+      <div className={css`
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-row-gap: 10px;
+
+            // for mobile drop down to 1 column
+            @media (max-width: 768px) {
+                grid-template-columns: 1fr;
+            }
+        `}>
+
         <div style={styles.heroImage}>
           <Image src="agentic.jpg" alt="Agentic Systems" layout="fill" />
         </div>
@@ -105,9 +114,8 @@ const ProjectsPage: NextPage = () => {
             We are working on fully autonomous AI agentic systems, taking advantage of RAG, short and long term memory, function calling and models which can be self deployed or ran locally through ollama.
           </p>
         </div>
-      </section>
 
-      <section style={styles.missionSection}>
+
         <div style={styles.missionText}>
           <h2 style={styles.sectionTitle}>Voltage Modular</h2>
           <p>
@@ -117,12 +125,19 @@ const ProjectsPage: NextPage = () => {
           Fully released modules can be found <a href="https://store.cherryaudio.com/manufacturers/lambdasafe" target="_blank" rel="noopener noreferrer">here</a>.
           </p>
         </div>
-        {/* <div style={styles.missionImage}> */}
-          <Image src="vm-reverb-ss.png" alt="Voltage Modular" width={300} height={400}  />
-        {/* </div> */}
-      </section>
+        <div className={css`
+          display: flex;
+          justify-content: right;
+          align-items: center;
+          // round corners
+          border-radius: 50%;
 
-      <section style={styles.heroSection}>
+          background-color: #f0f0f0;
+          `}>
+          <Image src="vm-reverb-ss.png" alt="Voltage Modular" width={300} height={400}  />
+        </div>
+ 
+
         <div style={styles.heroImage}>
           <Image src="line-drag-demo.gif" alt="Safe Passage" layout="fill" />
         </div>
@@ -132,9 +147,9 @@ const ProjectsPage: NextPage = () => {
           We have created a fully featured Vue abstraction for a 3D visualization library used in medical and security imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.  <strong>Demo available on request.</strong>
           </p>
         </div>
-      </section>
 
-      <section style={styles.missionSection}>
+
+
           <div style={styles.missionText}>
             <h2 style={styles.sectionTitle}>BIGKit</h2>
             <p>
@@ -152,9 +167,9 @@ const ProjectsPage: NextPage = () => {
           <div style={styles.missionImage}>
             <Image src="bigkit-hello-world.gif" alt="Mission" layout="fill" style={{ borderRadius: '8px' }} />
           </div>
-        </section>
-      
 
+      
+          </div>
     </PageContainer>
   );
 }
