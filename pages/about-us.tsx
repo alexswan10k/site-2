@@ -1,20 +1,12 @@
 import { NextPage } from "next"
 import { css } from "@emotion/css";
-import { ManagedEditor } from "react-inline-node-editor-bigkit"
 import ManagedMenu from "../managed-components/components/ManagedMenu";
 import PageContainer from "./components/PageContainer";
-import { schema } from "../managed-components/schema";
 import Image from "next/image";
 
 const AboutUsPage: NextPage = () => {
     // Styles object to organize all inline styles
     const styles = {
-      heroSection: {
-        display: 'flex',
-        alignItems: 'center',
-        marginBottom: '60px',
-        gap: '40px',
-      },
       heroImage: {
         flex: 1,
         position: "relative",
@@ -28,18 +20,12 @@ const AboutUsPage: NextPage = () => {
       },
       heroText: {
         flex: 1,
-        padding: '20px',
+
       },
       sectionTitle: {
         fontSize: '32px',
         marginBottom: '30px',
         color: '#2c3e50',
-      },
-      missionSection: {
-        display: 'flex',
-        gap: '40px',
-        marginBottom: '60px',
-        alignItems: 'center',
       },
       missionImage: {
         flex: 1,
@@ -56,19 +42,14 @@ const AboutUsPage: NextPage = () => {
         flex: 1,
         lineHeight: '1.6',
       },
-      teamSection: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
-        gap: '30px',
-        marginBottom: '60px',
-      },
+
       teamMember: {
         textAlign: 'center',
       },
       memberImage: {
         position: "relative",
-        width: '200px',
-        height: '200px',
+        width: '130px',
+        height: '160px',
         borderRadius: '50%',
         backgroundColor: '#e0e0e0',
         margin: '0 auto 20px',
@@ -78,28 +59,22 @@ const AboutUsPage: NextPage = () => {
         overflow: 'hidden',
 
       },
-      statsSection: {
-        display: 'flex',
-        justifyContent: 'space-around',
-        textAlign: 'center',
-        padding: '40px 0',
-        backgroundColor: '#f8f9fa',
-        borderRadius: '8px',
-      },
+
       statItem: {
         padding: '20px',
       },
     } as const;
-  
+
     return (
       <PageContainer title="About us" description="About us page">
         <ManagedMenu />
-        <br />  
+        <br />
 
         <div className={css`
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-row-gap: 20px;
+            grid-row-gap: 40px;
+            grid-column-gap: 40px;
 
             // for mobile drop down to 1 column
             @media (max-width: 768px) {
@@ -108,7 +83,7 @@ const AboutUsPage: NextPage = () => {
         `}>
           <div style={styles.heroImage}>
             {/* [Hero Image Placeholder] */}
-            <Image 
+            <Image
               src="/dude-at-computer.jpg" // Assuming the image is in the public directory
               alt="Hero Image"
               layout="fill" // This allows the image to fill its container
@@ -123,7 +98,7 @@ const AboutUsPage: NextPage = () => {
             </p>
           </div>
 
-  
+
 
           <div style={styles.missionText}>
             <h2 style={styles.sectionTitle}>Our Mission</h2>
@@ -149,10 +124,21 @@ Agile Approach: Recommended for flexibility, allowing for quick iterations and u
 Up-Front Approach: For those with fixed budgets, we provide detailed estimates but note the inherent risks and premiums of this method. Both methods aim for continuous feedback and visible progress, ensuring you&#39;re investing in features that add the most value.
             </p>
           </div>
-  
 
+        <section className={css`
+            //span 2 css grid rows
+            grid-column: 1/3;
+            @media (max-width: 768px) {
+             grid-column: 1/2;
+            }
+          `}>
           <h2 style={{ ...styles.sectionTitle, textAlign: 'center' }}>Our Team</h2>
-          <div style={styles.teamSection}>
+          <div style={{
+                display: 'grid',
+                gridTemplateColumns: 'repeat(auto-fit, minmax(250px, 1fr))',
+                gap: '30px',
+                marginBottom: '60px',
+              }}>
             <div style={styles.teamMember}>
                 <div style={styles.memberImage}>
                   <Image src="alex-profile-c.png" alt="Team Member Photo" layout="fill"  />
@@ -161,9 +147,22 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
                 <p>Director</p>
               </div>
           </div>
+          </section>
 
-  
-        <section style={styles.statsSection}>
+        <section className={css`
+            //span 2 css grid rows
+            grid-column: 1/3;
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            padding: 40px 0;
+            background-color: #f8f9fa;
+            border-radius: 8px;
+
+            @media (max-width: 768px) {
+             grid-column: 1/2;
+            }
+          `}>
           <div style={styles.statItem}>
             <h3>15+</h3>
             <p>Years Experience</p>
@@ -181,5 +180,5 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
       </PageContainer>
     );
   }
-  
+
   export default AboutUsPage;

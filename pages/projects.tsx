@@ -7,12 +7,7 @@ import { css } from "@emotion/css";
 const ProjectsPage: NextPage = () => {
   // Styles object to organize all inline styles
   const styles = {
-    heroSection: {
-      display: 'flex',
-      alignItems: 'center',
-      marginBottom: '60px',
-      gap: '40px',
-    },
+
     heroImage: {
       flex: 1,
       position: "relative",
@@ -22,22 +17,16 @@ const ProjectsPage: NextPage = () => {
       display: 'flex',
       alignItems: 'center',
       justifyContent: 'center',
-      borderRadius: '8px',
+      borderRadius: '32px',
     },
     heroText: {
       flex: 1,
-      padding: '20px',
+
     },
     sectionTitle: {
       fontSize: '32px',
       marginBottom: '30px',
       color: '#2c3e50',
-    },
-    missionSection: {
-      display: 'flex',
-      gap: '40px',
-      marginBottom: '60px',
-      alignItems: 'center',
     },
     missionImage: {
       flex: 1,
@@ -97,7 +86,8 @@ const ProjectsPage: NextPage = () => {
       <div className={css`
             display: grid;
             grid-template-columns: 1fr 1fr;
-            grid-row-gap: 10px;
+            grid-row-gap: 40px;
+            grid-column-gap: 40px;
 
             // for mobile drop down to 1 column
             @media (max-width: 768px) {
@@ -106,7 +96,7 @@ const ProjectsPage: NextPage = () => {
         `}>
 
         <div style={styles.heroImage}>
-          <Image src="agentic.jpg" alt="Agentic Systems" layout="fill" />
+          <Image src="agentic.jpg" alt="Agentic Systems" layout="fill" style={{ borderRadius: '32px' }}/>
         </div>
         <div style={styles.heroText}>
           <h1 style={styles.sectionTitle}>Agentic Systems</h1>
@@ -134,15 +124,15 @@ const ProjectsPage: NextPage = () => {
 
           background-color: #f0f0f0;
           `}>
-          <Image src="vm-reverb-ss.png" alt="Voltage Modular" width={300} height={400}  />
+          <Image src="vm-reverb-ss.png" alt="Voltage Modular" width={300} height={400} style={{ borderRadius: '8px' }} />
         </div>
  
 
         <div style={styles.heroImage}>
-          <Image src="line-drag-demo.gif" alt="Safe Passage" layout="fill" />
+          <Image src="line-drag-demo.gif" alt="Training Software" layout="fill" style={{ borderRadius: '8px' }} />
         </div>
         <div style={styles.heroText}>
-          <h1 style={styles.sectionTitle}>Safe Passage</h1>
+          <h1 style={styles.sectionTitle}>Training Software</h1>
           <p style={{ fontSize: '18px', lineHeight: '1.6' }}>
           We have created a fully featured Vue abstraction for a 3D visualization library used in medical and security imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.  <strong>Demo available on request.</strong>
           </p>

@@ -15,6 +15,11 @@ const PageContainer: FC<PropsWithChildren<{ title: string, description?: string 
       <div className={css`
         width: 960px;
         margin: 0 auto;
+
+        @media (max-width: 960px) {
+          width: 100%;
+        }
+
       `}>
         {children}
       </div>
