@@ -8,13 +8,6 @@ import Image from "next/image";
 const AboutUsPage: NextPage = () => {
     // Styles object to organize all inline styles
     const styles = {
-      container: {
-        maxWidth: '1200px',
-        margin: '0 auto',
-        padding: '0px 20px',
-        fontFamily: 'Arial, sans-serif',
-        color: '#333',
-      },
       heroSection: {
         display: 'flex',
         alignItems: 'center',
@@ -98,8 +91,7 @@ const AboutUsPage: NextPage = () => {
     } as const;
   
     return (
-      <div style={styles.container}>
-
+      <PageContainer title="About us" description="About us page">
         <ManagedMenu />
         <br />  
 
@@ -179,7 +171,7 @@ Up-Front Approach: For those with fixed budgets, we provide detailed estimates b
             <p>Client Satisfaction</p>
           </div>
         </section>
-      </div>
+      </PageContainer>
     );
   }
   

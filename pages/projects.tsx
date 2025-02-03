@@ -8,13 +8,6 @@ import Image from "next/image";
 const ProjectsPage: NextPage = () => {
   // Styles object to organize all inline styles
   const styles = {
-    container: {
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0px 20px',
-      fontFamily: 'Arial, sans-serif',
-      color: '#333',
-    },
     heroSection: {
       display: 'flex',
       alignItems: 'center',
@@ -97,7 +90,7 @@ const ProjectsPage: NextPage = () => {
   } as const;
 
   return (
-    <div style={styles.container}>
+    <PageContainer title="Projects" description="Explore our projects">
 
       <ManagedMenu />
 
@@ -162,7 +155,7 @@ const ProjectsPage: NextPage = () => {
         </section>
       
 
-    </div>
+    </PageContainer>
   );
 }
 
