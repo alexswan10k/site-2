@@ -14,7 +14,10 @@
                 "displayName": "Projects",
                 "link": "./projects"
             },
-
+            {
+                "displayName": "Experiments",
+                "link": "./experiments"
+            },
             {
                 "displayName": "Get in touch",
                 "link": "./contact"
