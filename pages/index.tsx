@@ -23,6 +23,12 @@ const Home: NextPage = () => {
             min-height: calc(100vh - 80px);
             display: flex;
             align-items: center;
+            @media (max-width: 768px) {
+                min-height: auto;
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                align-items: flex-start;
+            }
       `}>
         <Grid cols={2} gap="2rem" className={css`width: 100%;`}>
           {/* Logo Left */}
@@ -47,7 +53,12 @@ const Home: NextPage = () => {
           </Flex>
 
           {/* Text Right */}
-          <Flex direction="column" align="flex-start" justify="center">
+          <Flex direction="column" align="flex-start" justify="center" className={css`
+                @media (max-width: 768px) {
+                    align-items: center;
+                    text-align: center;
+                }
+          `}>
             <FadeFromLeft duration={3} delay={1}>
               <H1 className={css`
                         font-family: 'Verdana', sans-serif;
@@ -73,6 +84,7 @@ const Home: NextPage = () => {
                          @media (max-width: 768px) {
                             font-size: 1rem;
                             letter-spacing: 0.5em;
+                            margin-top: 1rem;
                         }
                     `}>
                 YOUR SOLUTION IS RIGHT HERE...

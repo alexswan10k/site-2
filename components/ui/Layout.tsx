@@ -5,6 +5,9 @@ export const Section = ({ children, className }: { children: React.ReactNode, cl
     <section className={cx(className, css`
         margin-bottom: 4rem;
         width: 100%;
+        @media (max-width: 768px) {
+            margin-bottom: 2.5rem;
+        }
     `)}>
         {children}
     </section>
@@ -19,6 +22,7 @@ export const Grid = ({ children, className, cols = 1, gap = '1rem' }: { children
         
         @media (max-width: 768px) {
              grid-template-columns: 1fr;
+             gap: 2rem; // Normalize gap on mobile
         }
     `, className)}>
         {children}
