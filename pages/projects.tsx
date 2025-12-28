@@ -20,43 +20,32 @@ const ProjectsPage: NextPage = () => {
 
       <Container className={css`padding-top: 2rem; padding-bottom: 4rem;`}>
 
-        {/* Agentic Systems */}
+        {/* Agentic Systems - Multi-Step Reasoning */}
         <Section>
           <Grid cols={2} gap="3rem">
-            <ImageWrapper src="/agentic.jpg" alt="Agentic Systems" aspectRatio="16/9" />
+            <ImageWrapper src="/agentic-reasoning.png" alt="Agentic Reasoning Process" aspectRatio="16/9" />
             <Flex direction="column" align="flex-start" justify="center">
               <H1>Agentic Systems</H1>
               <Text>
-                We are working on fully autonomous AI agentic systems, taking advantage of RAG, short and long term memory, function calling and models which can be self deployed or ran locally through ollama.
+                We are developing multi-step agentic systems that leverage vision and other modalities to understand and interact with the world. Our systems go beyond simple request-response models, engaging in complex reasoning chains to solve difficult problems.
               </Text>
             </Flex>
           </Grid>
         </Section>
 
-        {/* Voltage Modular */}
+        {/* Agentic Systems - Virtual Robotic Loop */}
         <Section>
           <Grid cols={2} gap="3rem">
             <Flex direction="column" align="flex-start" justify="center">
-              <H2>Voltage Modular</H2>
+              <H2>Autonomous Loops</H2>
               <Text>
-                We have developed advanced modules for a leading modular synthesis platform, utilizing cutting-edge programming languages to enhance audio processing capabilities. Our innovations include solutions for real-time audio effects and performance-enhancing technologies. <strong>Demo on request.</strong>
-              </Text>
-              <Text>
-                Fully released modules can be found <a href="https://store.cherryaudio.com/manufacturers/lambdasafe" target="_blank" rel="noopener noreferrer" className={css`color: #6366f1; text-decoration: none; &:hover { text-decoration: underline; }`}>here</a>.
+                Our research focuses on creating a virtual robotic agentic loop to enable truly autonomous interactions. By simulating a continuous feedback loop of perception, decision, and action, we create agents that can adapt and operate independently in dynamic environments.
               </Text>
             </Flex>
-            <ImageWrapper
-              src="/vm-reverb-ss.png"
-              alt="Voltage Modular"
-              aspectRatio="1/1"
-              wrapperClassName={css`
-                        border-radius: 50% !important; 
-                        width: 300px; 
-                        margin-left: auto;
-                    `}
-            />
+            <ImageWrapper src="/freaky-nodes.jpg" alt="Autonomous Loop Interface" aspectRatio="16/9" />
           </Grid>
         </Section>
+
 
         {/* Training Software */}
         <Section>
@@ -97,6 +86,31 @@ const ProjectsPage: NextPage = () => {
               </ul>
             </Flex>
             <ImageWrapper src="/bigkit-hello-world.gif" alt="BIGKit Mission" aspectRatio="4/3" />
+          </Grid>
+        </Section>
+
+        {/* Voltage Modular */}
+        <Section>
+          <Grid cols={2} gap="3rem">
+            <Flex direction="column" align="flex-start" justify="center">
+              <H2>Voltage Modular</H2>
+              <Text>
+                We have developed advanced modules for a leading modular synthesis platform, utilizing cutting-edge programming languages to enhance audio processing capabilities. Our innovations include solutions for real-time audio effects and performance-enhancing technologies. <strong>Demo on request.</strong>
+              </Text>
+              <Text>
+                Fully released modules can be found <a href="https://store.cherryaudio.com/manufacturers/lambdasafe" target="_blank" rel="noopener noreferrer" className={css`color: #6366f1; text-decoration: none; &:hover { text-decoration: underline; }`}>here</a>.
+              </Text>
+            </Flex>
+            <ImageWrapper
+              src="/vm-reverb-ss.png"
+              alt="Voltage Modular"
+              aspectRatio="1/1"
+              wrapperClassName={css`
+                        border-radius: 50% !important; 
+                        width: 300px; 
+                        margin-left: auto;
+                    `}
+            />
           </Grid>
         </Section>
 
