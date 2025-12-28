@@ -64,6 +64,9 @@ export const H3: React.FC<TypographyProps> = ({ children, className, ...props })
         color: #0f172a;
         line-height: 1.4;
         margin-bottom: 1rem;
+        @media (max-width: 768px) {
+            font-size: 1.25rem;
+        }
       `,
             className
         )}
@@ -82,6 +85,10 @@ export const Text: React.FC<TypographyProps> = ({ children, className, ...props 
         color: #334155; // Slate
         line-height: 1.6;
         margin-bottom: 1rem;
+        @media (max-width: 768px) {
+            font-size: 1rem;
+            line-height: 1.5;
+        }
       `,
             className
         )}
