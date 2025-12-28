@@ -1,6 +1,9 @@
 import { NextPage } from "next";
-import PageContainer from "../components/PageContainer";
+import Head from "next/head";
 import ReactMarkdown from 'react-markdown'
+import { Navbar } from "../../components/ui/Navigation";
+import { Container } from "../../components/ui/Container";
+import { css } from "@emotion/css";
 
 const md = `
 # Privacy Policy
@@ -37,11 +40,35 @@ Our app does not address anyone under the age of 13. We do not knowingly collect
 If you have any questions about this privacy policy, including any requests to exercise your legal rights, please contact us at alex.lambdasafe@gmail.com.
 `
 
-const PrivacyPolicy: NextPage = () => 
-    <PageContainer title="privacy-policy">
-        <ReactMarkdown>
-            {md}
-        </ReactMarkdown>
-    </PageContainer>
+const PrivacyPolicy: NextPage = () =>
+    <>
+        <Head>
+            <title>Privacy Policy | Organizator</title>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <Navbar />
+        <Container className={css`padding-top: 2rem; padding-bottom: 4rem;`}>
+            <div className={css`
+                font-family: 'Inter', sans-serif;
+                line-height: 1.6;
+                color: #334155;
+                h1, h2, h3 { 
+                    font-family: 'Outfit', 'Inter', sans-serif;
+                    color: #0f172a; 
+                    margin-top: 1.5em; 
+                    margin-bottom: 0.5em; 
+                    font-weight: 700;
+                }
+                h1 { font-size: 2.5rem; }
+                h2 { font-size: 1.75rem; }
+                p { margin-bottom: 1rem; }
+                a { color: #6366f1; text-decoration: none; &:hover { text-decoration: underline; } }
+            `}>
+                <ReactMarkdown>
+                    {md}
+                </ReactMarkdown>
+            </div>
+        </Container>
+    </>
 
 export default PrivacyPolicy

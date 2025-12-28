@@ -12,12 +12,13 @@
     "run-static": "http-server ./docs -p 8888"
   },
   "dependencies": {
+    "@emotion/css": "^11.13.5",
+    "framer-motion": "6.5.1",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-inline-node-editor": "^0.0.7",
     "react-inline-node-editor-bigkit": "^0.0.7",
-    "framer-motion" : "6.5.1",
     "react-markdown": "9.0.1"
   },
   "devDependencies": {
@@ -27,5 +28,6 @@
     "eslint": "8.12.0",
     "eslint-config-next": "12.1.4",
     "typescript": "4.6.3"
-  }
+  },
+  "packageManager": "pnpm@10.8.0+sha512.0e82714d1b5b43c74610193cb20734897c1d00de89d0e18420aebc5977fa13d780a9cb05734624e81ebd81cc876cd464794850641c48b9544326b5622ca29971"
 }
