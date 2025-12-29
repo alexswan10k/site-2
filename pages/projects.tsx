@@ -20,68 +20,29 @@ const ProjectsPage: NextPage = () => {
 
       <Container className={css`padding-top: 2rem; padding-bottom: 4rem;`}>
 
-        {/* Intro */}
-        <Section className={css`text-align: center; margin-bottom: 4rem;`}>
-           <H1>High-Stakes Implementations</H1>
-           <Text className={css`max-width: 800px; margin: 0 auto;`}>
-             From securing financial models to orchestrating autonomous agents, we build the infrastructure that makes AI reliable in the real world.
-           </Text>
-        </Section>
-
-        {/* FinTech GenAI Guardrails (New) */}
+        {/* Agentic Systems - Multi-Step Reasoning */}
         <Section>
           <Grid cols={2} gap="3rem">
-             <div className={css`
-                width: 100%;
-                aspect-ratio: 16/9;
-                background: linear-gradient(135deg, #0f172a 0%, #334155 100%);
-                border-radius: 12px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: white;
-                font-family: 'Exo 2', sans-serif;
-                font-size: 1.5rem;
-                font-weight: 700;
-             `}>
-                FinTech Guardrails
-             </div>
-            <Flex direction="column" align="flex-start" justify="center">
-              <H2>FinTech GenAI Guardrails</H2>
-              <Text>
-                We engineered a deterministic validation layer for a major financial institution&apos;s internal LLM chatbot. By implementing a hybrid retrieval-augmented generation (RAG) architecture with strict schema validation, we reduced hallucination rates to &lt;0.1% and ensured full regulatory compliance for sensitive data queries.
-              </Text>
-            </Flex>
-          </Grid>
-        </Section>
-
-        {/* Agentic Systems - Multi-Step Reasoning (Refined) */}
-        <Section>
-          <Grid cols={2} gap="3rem">
-            <Flex direction="column" align="flex-start" justify="center" className={css`
-               @media (max-width: 768px) {
-                  order: 2;
-               }
-            `}>
-              <H2>Agentic Systems Architecture</H2>
-              <Text>
-                We develop robust orchestration layers for multi-step agentic systems. Our focus is on state management and observability, allowing autonomous agents to engage in complex reasoning chains while maintaining a traceable, reversible audit trail. This transforms &quot;black box&quot; AI actions into transparent, managed workflows.
-              </Text>
-            </Flex>
             <ImageWrapper src="/agentic-reasoning.png" alt="Agentic Reasoning Process" aspectRatio="16/9" />
+            <Flex direction="column" align="flex-start" justify="center">
+              <H1>Agentic Systems</H1>
+              <Text>
+                We are developing multi-step agentic systems that leverage vision and other modalities to understand and interact with the world. Our systems go beyond simple request-response models, engaging in complex reasoning chains to solve difficult problems.
+              </Text>
+            </Flex>
           </Grid>
         </Section>
 
         {/* Agentic Systems - Virtual Robotic Loop */}
         <Section>
           <Grid cols={2} gap="3rem">
-            <ImageWrapper src="/freaky-nodes.jpg" alt="Autonomous Loop Interface" aspectRatio="16/9" />
             <Flex direction="column" align="flex-start" justify="center">
-              <H2>Autonomous Feedback Loops</H2>
+              <H2>Autonomous Loops</H2>
               <Text>
-                Our research focuses on creating reliable virtual robotic loops. By simulating a continuous feedback cycle of perception, decision, and action with hard safety constraints, we create agents that can adapt to dynamic environments without exceeding defined operational boundaries.
+                Our research focuses on creating a virtual robotic agentic loop to enable truly autonomous interactions. By simulating a continuous feedback loop of perception, decision, and action, we create agents that can adapt and operate independently in dynamic environments.
               </Text>
             </Flex>
+            <ImageWrapper src="/freaky-nodes.jpg" alt="Autonomous Loop Interface" aspectRatio="16/9" />
           </Grid>
         </Section>
 
@@ -89,28 +50,26 @@ const ProjectsPage: NextPage = () => {
         {/* Training Software */}
         <Section>
           <Grid cols={2} gap="3rem">
-             <Flex direction="column" align="flex-start" justify="center" className={css`
-               @media (max-width: 768px) {
-                  order: 2;
-               }
-            `}>
-              <H2>Medical Training Simulation</H2>
+            <ImageWrapper src="/line-drag-demo.gif" alt="Training Software" aspectRatio="16/9" />
+            <Flex direction="column" align="flex-start" justify="center">
+              <H1>Training Software</H1>
               <Text>
-                We created a fully featured Vue abstraction for a 3D visualization library used in medical and security imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.
+                We have created a fully featured Vue abstraction for a 3D visualization library used in medical and security imaging. This solution enhances training applications by simulating different imaging scenarios, with features for scene manipulation and real-time parameter adjustments.  <strong>Demo available on request.</strong>
               </Text>
             </Flex>
-            <ImageWrapper src="/line-drag-demo.gif" alt="Training Software" aspectRatio="16/9" />
           </Grid>
         </Section>
 
         {/* BIGKit */}
         <Section>
           <Grid cols={2} gap="3rem">
-            <ImageWrapper src="/bigkit-hello-world.gif" alt="BIGKit Mission" aspectRatio="4/3" />
             <Flex direction="column" align="flex-start" justify="center">
-              <H2>BIGKit CMS</H2>
+              <H2>BIGKit</H2>
               <Text>
                 BIGKit attempts to bridge the gap between a publish-focused CMS and real application development. It was built from the ground up to include some core tenets an opinionated software engineer might expect from a system builder.
+              </Text>
+              <Text>
+                You can read the full articles below:
               </Text>
               <ul className={css`
                         list-style-type: disc;
@@ -126,20 +85,17 @@ const ProjectsPage: NextPage = () => {
                 <li><a href="https://medium.com/swlh/exploring-graphql-with-bigkit-d6c6236b3a5d" target="_blank" rel="noreferrer">Exploring GraphQL integration With BIGKit</a></li>
               </ul>
             </Flex>
+            <ImageWrapper src="/bigkit-hello-world.gif" alt="BIGKit Mission" aspectRatio="4/3" />
           </Grid>
         </Section>
 
         {/* Voltage Modular */}
         <Section>
           <Grid cols={2} gap="3rem">
-             <Flex direction="column" align="flex-start" justify="center" className={css`
-               @media (max-width: 768px) {
-                  order: 2;
-               }
-            `}>
-              <H2>Voltage Modular Audio</H2>
+            <Flex direction="column" align="flex-start" justify="center">
+              <H2>Voltage Modular</H2>
               <Text>
-                We have developed advanced modules for a leading modular synthesis platform, utilizing cutting-edge programming languages to enhance audio processing capabilities. Our innovations include solutions for real-time audio effects and performance-enhancing technologies.
+                We have developed advanced modules for a leading modular synthesis platform, utilizing cutting-edge programming languages to enhance audio processing capabilities. Our innovations include solutions for real-time audio effects and performance-enhancing technologies. <strong>Demo on request.</strong>
               </Text>
               <Text>
                 Fully released modules can be found <a href="https://store.cherryaudio.com/manufacturers/lambdasafe" target="_blank" rel="noopener noreferrer" className={css`color: #6366f1; text-decoration: none; &:hover { text-decoration: underline; }`}>here</a>.
@@ -153,9 +109,6 @@ const ProjectsPage: NextPage = () => {
                         border-radius: 50% !important; 
                         width: 300px; 
                         margin-left: auto;
-                        @media (max-width: 768px) {
-                             margin-right: auto;
-                        }
                     `}
             />
           </Grid>
