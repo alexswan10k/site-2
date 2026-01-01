@@ -1,13 +1,16 @@
 import { css, cx } from '@emotion/css';
 import React from 'react';
-import { motion } from 'framer-motion';
+import { HTMLMotionProps, motion } from 'framer-motion';
 
-interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+type MotionButtonProps = HTMLMotionProps<'button'>;
+type ReactButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
+
+interface ButtonProps extends Omit<ReactButtonProps, keyof MotionButtonProps> {
     variant?: 'primary' | 'secondary' | 'outline';
     size?: 'sm' | 'md' | 'lg';
 }
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
+export const Button = React.forwardRef<HTMLButtonElement, ButtonProps & MotionButtonProps>(
     ({ children, className, variant = 'primary', size = 'md', ...props }, ref) => {
         return (
             <motion.button
@@ -58,7 +61,7 @@ export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                     `,
                     className
                 )}
-                {...props}
+                {...(props as any)}
             >
                 {children}
             </motion.button>

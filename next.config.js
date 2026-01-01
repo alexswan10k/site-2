@@ -2,13 +2,13 @@
 const nextConfig = {
   // assetPrefix: './',
   reactStrictMode: true,
-  exportPathMap: async function() {
+  exportPathMap: async function () {
     return {
       "/": { page: "/" },
-      "/about-us": { page: "/about-us"},
+      "/about-us": { page: "/about-us" },
       "/test": { page: "/test" },
       "/organizator/privacy-policy": { page: "/organizator/privacy-policy" },
-    } 
+    }
   },
   experimental: {
     images: {
