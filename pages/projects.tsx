@@ -114,6 +114,26 @@ const ProjectsPage: NextPage = () => {
           </Grid>
         </Section>
 
+        {/* Vibe Experiments */}
+        <Section>
+          <Grid cols={2} gap="3rem">
+            <ImageWrapper
+              src="https://placehold.co/600x400/png?text=Vibe+Experiments"
+              alt="Vibe Experiments"
+              aspectRatio="16/9"
+            />
+            <Flex direction="column" align="flex-start" justify="center">
+              <H2>Vibe Experiments</H2>
+              <Text>
+                A playground for AI-assisted development. We&apos;ve built over 40 distinct web applications ranging from particle physics simulations to full-featured productivity tools, all created to test the limits of modern AI coding assistants.
+              </Text>
+              <Text>
+                <a href="https://alexswan10k.github.io/vibe-exps/" target="_blank" rel="noopener noreferrer" className={css`color: #6366f1; text-decoration: none; &:hover { text-decoration: underline; }`}>Explore Experiments</a>
+              </Text>
+            </Flex>
+          </Grid>
+        </Section>
+
       </Container>
     </>
   );

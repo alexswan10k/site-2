@@ -1,0 +1,30 @@
+
+> site@0.1.0 dev
+> next dev
+
+ready - started server on 0.0.0.0:3000, url: http://localhost:3000
+warn  - Invalid next.config.js options detected:
+[
+  {
+    "instancePath": "",
+    "schemaPath": "#/additionalProperties",
+    "keyword": "additionalProperties",
+    "params": {
+      "additionalProperty": "exportPathMap"
+    },
+    "message": "must NOT have additional properties"
+  }
+]
+See more info here: https://nextjs.org/docs/messages/invalid-next-config
+warn  - You have enabled experimental feature (images) in next.config.js.
+warn  - Experimental features are not covered by semver, and may cause unexpected or broken application behavior. Use at your own risk.
+
+Defining routes from exportPathMap
+Browserslist: caniuse-lite is outdated. Please run:
+  npx browserslist@latest --update-db
+  Why you should do it regularly: https://github.com/browserslist/browserslist#browsers-data-updating
+event - compiled client and server successfully in 1904 ms (171 modules)
+wait  - compiling /projects (client and server)...
+event - compiled client and server successfully in 2.4s (582 modules)
+Do not add stylesheets using next/head (see <link rel="stylesheet"> tag with href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Outfit:wght@400;700&family=Oxygen:wght@300;400;700&display=swap"). Use Document instead.
+See more info here: https://nextjs.org/docs/messages/no-stylesheets-in-head-component
