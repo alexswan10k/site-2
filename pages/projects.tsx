@@ -115,11 +115,11 @@ const ProjectsPage: NextPage = () => {
           </Grid>
         </Section>
 
-        {/* Showcase & Demos */}
+        {/* Interactive Showcase */}
         <Section>
-          <H1 className={css`margin-bottom: 2rem;`}>Showcase & Demos</H1>
-          <Grid cols={2} gap="2rem">
-            {/* Card 1 - External */}
+          <H1 className={css`margin-bottom: 2rem;`}>Interactive Showcase</H1>
+          <Grid cols={1} gap="2rem">
+            {/* External Showcase */}
             <a href="https://alexswan10k.github.io/vibe-exps/" target="_blank" rel="noopener noreferrer" className={css`text-decoration: none; color: inherit;`}>
               <div className={css`
                         background: #fff;
@@ -127,43 +127,19 @@ const ProjectsPage: NextPage = () => {
                         overflow: hidden;
                         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
                         transition: all 0.3s ease;
-                        height: 100%;
+                        max-width: 600px;
                         &:hover {
                             transform: translateY(-5px);
                             box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
                         }
                     `}>
-                <ImageWrapper src="/ornament.jpg" alt="Interactive Showcases" aspectRatio="16/9" />
+                <ImageWrapper src="/ornament.jpg" alt="Interactive Showcase" aspectRatio="16/9" />
                 <div className={css`padding: 1.5rem;`}>
-                  <H2 className={css`font-size: 1.5rem; margin-bottom: 0.5rem;`}>Interactive Showcases</H2>
+                  <H2 className={css`font-size: 1.5rem; margin-bottom: 0.5rem;`}>Interactive Showcase</H2>
                   <Text>Light demos and tools showcasing our interactive capabilities. Explore a collection of apps designed to demonstrate what we can build for you.</Text>
                 </div>
               </div>
             </a>
-
-            {/* Card 2 - Internal */}
-            <Link href="/experiments" passHref>
-              <a className={css`text-decoration: none; color: inherit;`}>
-                <div className={css`
-                         background: #fff;
-                        border-radius: 12px;
-                        overflow: hidden;
-                        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-                        transition: all 0.3s ease;
-                        height: 100%;
-                        &:hover {
-                            transform: translateY(-5px);
-                            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-                        }
-                    `}>
-                  <ImageWrapper src="/agentic.jpg" alt="Game Prototypes" aspectRatio="16/9" />
-                  <div className={css`padding: 1.5rem;`}>
-                    <H2 className={css`font-size: 1.5rem; margin-bottom: 0.5rem;`}>Game Prototypes</H2>
-                    <Text>A collection of experimental game mechanics including space shooters and platformers, demonstrating real-time rendering and logic.</Text>
-                  </div>
-                </div>
-              </a>
-            </Link>
           </Grid>
         </Section>
 
